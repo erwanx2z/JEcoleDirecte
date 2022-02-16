@@ -1,6 +1,7 @@
 package fr.erwanx2z.api.impl;
 
 import fr.erwanx2z.api.impl.data.IClassroom;
+import fr.erwanx2z.api.impl.data.IGradeLoader;
 
 /**
  * @author Erwan - 2nde5
@@ -13,6 +14,9 @@ public interface IProfile {
 
     //Permet de récupérer la Classe de l'élève utilisé sur ce profile.
     IClassroom getClassroom();
+
+    //Permet de récupérer les notes de l'élève.
+    IGradeLoader getGradeLoader();
 
     //Permet de récupérer le prénom de l'élève.
     String getFirstName();

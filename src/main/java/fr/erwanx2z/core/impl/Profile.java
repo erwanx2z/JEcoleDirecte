@@ -2,6 +2,7 @@ package fr.erwanx2z.core.impl;
 
 import fr.erwanx2z.api.impl.IProfile;
 import fr.erwanx2z.core.impl.data.Classroom;
+import fr.erwanx2z.core.impl.data.GradeLoader;
 import lombok.Getter;
 import org.json.JSONObject;
 
@@ -12,6 +13,7 @@ public class Profile implements IProfile {
 
     @Getter private final Session session;
     @Getter private final Classroom classroom;
+    @Getter private final GradeLoader gradeLoader;
     
     @Getter private final String firstName;
     @Getter private final String lastName;
@@ -35,6 +37,7 @@ public class Profile implements IProfile {
         this.classroom = new Classroom(profileData.getJSONObject("classe"));
         this.genre = profileData.getString("sexe").equals("M") ? "Garçon" : "Fille";
 
+        this.gradeLoader = new GradeLoader(this);
     }
 
 }

@@ -2,6 +2,7 @@ package fr.erwanx2z.core.cache;
 
 import fr.erwanx2z.api.cache.ISessionManager;
 import fr.erwanx2z.core.impl.Session;
+import fr.erwanx2z.core.utils.EcoleDirecteLink;
 import fr.erwanx2z.core.utils.RequestUtils;
 import lombok.Getter;
 
@@ -20,7 +21,7 @@ public class SessionManager implements ISessionManager {
             return this.sessionList.get(username);
 
         try {
-            Session session = new Session(RequestUtils.sendRequest(username, password));
+            Session session = new Session(RequestUtils.sendRequest(username, password, EcoleDirecteLink.ECOLEDIRECTE_LOGIN.getRequestName()));
             this.sessionList.put(username, session);
             return session;
         } catch (Exception e){

@@ -12,9 +12,13 @@ import java.net.URL;
  */
 public class RequestUtils {
 
-    public static String sendRequest(String username, String password) {
+    public static String sendRequest(String username, String password, String link) {
+        return sendRequest(username, password, null, link);
+    }
+
+    public static String sendRequest(String username, String password, String body, String link) {
         try {
-            HttpURLConnection connection = (HttpURLConnection) new URL(EcoleDirecteLink.ECOLEDIRECTE_LOGIN.getRequestName()).openConnection();
+            HttpURLConnection connection = (HttpURLConnection) new URL(link).openConnection();
             connection.setDoOutput(true);
             connection.setUseCaches(false);
             connection.setDefaultUseCaches(false);
@@ -23,7 +27,11 @@ public class RequestUtils {
             connection.addRequestProperty("Pragma", "no-cache");
 
             PrintWriter pw = new PrintWriter(connection.getOutputStream());
-            pw.write("data={\"identifiant\": \"" + username + "\", \"motdepasse\": \"" + password + "\"}");
+            if(body == null)
+                pw.write("data={\"identifiant\": \"" + username + "\", \"motdepasse\": \"" + password + "\"}");
+            else
+                pw.write(body);
+
             pw.flush();
 
             BufferedReader br = new BufferedReader(new InputStreamReader(connection.getInputStream(), "UTF-8"));
