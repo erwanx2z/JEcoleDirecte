@@ -10,7 +10,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author Erwan - 2nde5
+ * This file is a part of JEcoleDirecte, an Open-Source library
  */
 public class SessionManager implements ISessionManager {
 

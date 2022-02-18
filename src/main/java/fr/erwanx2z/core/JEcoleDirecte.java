@@ -5,7 +5,7 @@ import fr.erwanx2z.api.cache.ISessionManager;
 import fr.erwanx2z.core.cache.SessionManager;
 
 /**
- * @author Erwan - 2nde5
+ * This file is a part of JEcoleDirecte, an Open-Source library
  */
 public class JEcoleDirecte extends JEcoleDirecteAPI {
 

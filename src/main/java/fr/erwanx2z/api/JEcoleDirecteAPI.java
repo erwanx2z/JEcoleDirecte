@@ -3,7 +3,7 @@ package fr.erwanx2z.api;
 import fr.erwanx2z.api.cache.ISessionManager;
 
 /**
- * @author Erwan - 2nde5
+ * This file is a part of JEcoleDirecte, an Open-Source library
  */
 public abstract class JEcoleDirecteAPI {
 

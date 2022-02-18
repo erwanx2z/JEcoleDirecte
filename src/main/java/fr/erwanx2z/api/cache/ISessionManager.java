@@ -1,10 +1,10 @@
 package fr.erwanx2z.api.cache;
 
 import fr.erwanx2z.api.impl.ISession;
-import fr.erwanx2z.core.utils.exception.ProfileNotFoundException;
+import fr.erwanx2z.common.exception.ProfileNotFoundException;
 
 /**
- * @author Erwan - 2nde5
+ * This file is a part of JEcoleDirecte, an Open-Source library
  */
 public interface ISessionManager {
 

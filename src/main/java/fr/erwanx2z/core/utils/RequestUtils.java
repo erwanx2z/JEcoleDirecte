@@ -8,7 +8,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * @author Erwan - 2nde5
+ * This file is a part of JEcoleDirecte, an Open-Source library
  */
 public class RequestUtils {
 

@@ -5,7 +5,7 @@ import lombok.Getter;
 import org.json.JSONObject;
 
 /**
- * @author Erwan - 2nde5
+ * This file is a part of JEcoleDirecte, an Open-Source library
  */
 public class Classroom implements IClassroom {
 

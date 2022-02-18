@@ -1,12 +1,12 @@
 package fr.erwanx2z.core.impl;
 
 import fr.erwanx2z.api.impl.ISession;
-import fr.erwanx2z.core.utils.exception.ProfileNotFoundException;
+import fr.erwanx2z.common.exception.ProfileNotFoundException;
 import lombok.Getter;
 import org.json.JSONObject;
 
 /**
- * @author Erwan - 2nde5
+ * This file is a part of JEcoleDirecte, an Open-Source library
  */
 public class Session implements ISession {
 

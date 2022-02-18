@@ -2,9 +2,10 @@ package fr.erwanx2z.api.impl;
 
 import fr.erwanx2z.api.impl.data.IClassroom;
 import fr.erwanx2z.api.impl.data.IGradeLoader;
+import fr.erwanx2z.api.impl.data.ISanctionsLoader;
 
 /**
- * @author Erwan - 2nde5
+ * This file is a part of JEcoleDirecte, an Open-Source library
  */
 public interface IProfile {
 
@@ -17,6 +18,9 @@ public interface IProfile {
 
     //Permet de récupérer les notes de l'élève.
     IGradeLoader getGradeLoader();
+
+    //Permet de récupérer les sanctions de l'élève (Retard & Absences).
+    ISanctionsLoader getSanctionsLoader();
 
     //Permet de récupérer le prénom de l'élève.
     String getFirstName();

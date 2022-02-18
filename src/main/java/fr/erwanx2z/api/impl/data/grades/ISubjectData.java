@@ -3,7 +3,7 @@ package fr.erwanx2z.api.impl.data.grades;
 import java.util.List;
 
 /**
- * @author Erwan - 2nde5
+ * This file is a part of JEcoleDirecte, an Open-Source library
  */
 public interface ISubjectData {
 

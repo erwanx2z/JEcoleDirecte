@@ -1,7 +1,7 @@
-package fr.erwanx2z.core.utils.exception;
+package fr.erwanx2z.common.exception;
 
 /**
- * @author Erwan - 2nde5
+ * This file is a part of JEcoleDirecte, an Open-Source library
  */
 public class ProfileNotFoundException extends Exception {
 

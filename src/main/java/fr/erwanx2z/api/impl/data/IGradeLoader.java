@@ -4,7 +4,7 @@ import fr.erwanx2z.api.impl.IProfile;
 import fr.erwanx2z.api.impl.data.grades.IPeriodeData;
 
 /**
- * @author Erwan - 2nde5
+ * This file is a part of JEcoleDirecte, an Open-Source library
  */
 public interface IGradeLoader {
 

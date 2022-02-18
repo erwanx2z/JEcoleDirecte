@@ -3,18 +3,20 @@ package fr.erwanx2z.core.impl;
 import fr.erwanx2z.api.impl.IProfile;
 import fr.erwanx2z.core.impl.data.Classroom;
 import fr.erwanx2z.core.impl.data.GradeLoader;
+import fr.erwanx2z.core.impl.data.SanctionsLoader;
 import lombok.Getter;
 import org.json.JSONObject;
 
 /**
- * @author Erwan - 2nde5
+ * This file is a part of JEcoleDirecte, an Open-Source library
  */
 public class Profile implements IProfile {
 
     @Getter private final Session session;
     @Getter private final Classroom classroom;
     @Getter private final GradeLoader gradeLoader;
-    
+    @Getter private final SanctionsLoader sanctionsLoader;
+
     @Getter private final String firstName;
     @Getter private final String lastName;
     @Getter private final String mail;
@@ -38,6 +40,7 @@ public class Profile implements IProfile {
         this.genre = profileData.getString("sexe").equals("M") ? "Garçon" : "Fille";
 
         this.gradeLoader = new GradeLoader(this);
+        this.sanctionsLoader = new SanctionsLoader(this);
     }
 
 }

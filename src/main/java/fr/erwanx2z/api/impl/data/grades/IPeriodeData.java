@@ -5,7 +5,7 @@ import fr.erwanx2z.core.impl.data.grades.SubjectData;
 import java.util.Map;
 
 /**
- * @author Erwan - 2nde5
+ * This file is a part of JEcoleDirecte, an Open-Source library
  */
 public interface IPeriodeData {
 
