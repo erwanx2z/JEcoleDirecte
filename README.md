@@ -8,3 +8,5 @@ Cette Library possède également une API expliquée (je sais que faire une part
  JEcoleDirecte n'est pas encore fini, mais dès que ce projet le sera, vous pourrez retrouver une repo maven afin de l'utiliser dans vos propres projets !
 
 -----------------------------------
+
+# Projet mis en pause pour le moment
