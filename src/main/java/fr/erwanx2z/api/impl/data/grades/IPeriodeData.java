@@ -35,16 +35,16 @@ public interface IPeriodeData {
 
 
     //Permet de récupérer la moyenne maximale dans cette classe pendant cette période. (Si inexistant = -1)
-    double getAverageMax();
+    String getAverageMax();
 
     //Permet de récupérer la moyenne générale de cette classe pendant cette période. (Si inexistant = -1)
-    double getAverageClasse();
+    String getAverageClasse();
 
     //Permet de récupérer la moyenne minimale dans cette classe pendant cette période. (Si inexistant = -1)
-    double getAverageMin();
+    String getAverageMin();
 
     //Permet de récupérer la moyenne générale de l'élève sur la période.
-    double getAveragePerso();
+    String getAveragePerso();
 
     /**
      *

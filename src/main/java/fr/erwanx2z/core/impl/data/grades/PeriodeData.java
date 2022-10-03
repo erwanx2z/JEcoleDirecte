@@ -25,10 +25,10 @@ public class PeriodeData implements IPeriodeData {
     @Getter private final String beginDate;
     @Getter private final String endDate;
 
-    @Getter private final double averageMax;
-    @Getter private final double averageClasse;
-    @Getter private final double averageMin;
-    @Getter private final double averagePerso;
+    @Getter private final String averageMax;
+    @Getter private final String averageClasse;
+    @Getter private final String averageMin;
+    @Getter private final String averagePerso;
 
 
     public PeriodeData(JSONObject jsonObject, GradeLoader gradeLoader){
@@ -44,26 +44,26 @@ public class PeriodeData implements IPeriodeData {
 
 
         JSONObject matieres = jsonObject.getJSONObject("ensembleMatieres");
-        if(matieres.getString("moyenneMax").isEmpty())
-            this.averageMax = -1;
+        if(!matieres.has("moyenneMax"))
+            this.averageMax = "-1";
         else
-            this.averageMax = Double.parseDouble(matieres.getString("moyenneMax").replace(",", "."));
+            this.averageMax = matieres.getString("moyenneMax").replace(",", ".");
 
-        if(matieres.getString("moyenneMin").isEmpty())
-            this.averageMin = -1;
+        if(!matieres.has("moyenneMin"))
+            this.averageMin = "-1";
         else
-            this.averageMin = Double.parseDouble(matieres.getString("moyenneMin").replace(",", "."));
+            this.averageMin = matieres.getString("moyenneMin").replace(",", ".");
 
 
-        if(matieres.getString("moyenneClasse").isEmpty())
-            this.averageClasse = -1;
+        if(!matieres.has("moyenneClasse"))
+            this.averageClasse = "-1";
         else
-            this.averageClasse = Double.parseDouble(matieres.getString("moyenneClasse").replace(",", "."));
+            this.averageClasse = matieres.getString("moyenneClasse").replace(",", ".");
 
-        if(matieres.getString("moyenneGenerale").isEmpty())
-            this.averagePerso = -1;
+        if(!matieres.has("moyenneGenerale"))
+            this.averagePerso = "-1";
         else
-            this.averagePerso = Double.parseDouble(matieres.getString("moyenneGenerale").replace(",", "."));
+            this.averagePerso = matieres.getString("moyenneGenerale").replace(",", ".");
 
 
         JSONArray disciplines = matieres.getJSONArray("disciplines");

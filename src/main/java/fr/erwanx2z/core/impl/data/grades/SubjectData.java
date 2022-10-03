@@ -19,10 +19,10 @@ public class SubjectData implements ISubjectData {
     @Getter private final int coefficient;
     @Getter private final int effectif;
 
-    @Getter private final double averageMax;
-    @Getter private final double averageClasse;
-    @Getter private final double averageMin;
-    @Getter private final double averagePerso;
+    @Getter private final String averageMax;
+    @Getter private final String averageClasse;
+    @Getter private final String averageMin;
+    @Getter private final String averagePerso;
 
     @Getter private final List<String> professeursList = new ArrayList<>();
 
@@ -33,26 +33,26 @@ public class SubjectData implements ISubjectData {
         this.coefficient = jsonObject.getInt("coef");
         this.effectif = jsonObject.getInt("effectif");
 
-        if(jsonObject.getString("moyenneMax").isEmpty())
-            this.averageMax = -1;
+        if(!jsonObject.has("moyenneMax"))
+            this.averageMax = "-1";
         else
-            this.averageMax = Double.parseDouble(jsonObject.getString("moyenneMax").replace(",", "."));
+            this.averageMax = jsonObject.getString("moyenneMax").replace(",", ".");
 
-        if(jsonObject.getString("moyenneMin").isEmpty())
-            this.averageMin = -1;
+        if(!jsonObject.has("moyenneMin"))
+            this.averageMin = "-1";
         else
-            this.averageMin = Double.parseDouble(jsonObject.getString("moyenneMin").replace(",", "."));
+            this.averageMin = jsonObject.getString("moyenneMin").replace(",", ".");
 
 
-        if(jsonObject.getString("moyenneClasse").isEmpty())
-            this.averageClasse = -1;
+        if(!jsonObject.has("moyenneClasse"))
+            this.averageClasse = "-1";
         else
-            this.averageClasse = Double.parseDouble(jsonObject.getString("moyenneClasse").replace(",", "."));
+            this.averageClasse = jsonObject.getString("moyenneClasse").replace(",", ".");
 
-        if(jsonObject.getString("moyenne").isEmpty())
-            this.averagePerso = -1;
+        if(!jsonObject.has("moyenne"))
+            this.averagePerso = "-1";
         else
-            this.averagePerso = Double.parseDouble(jsonObject.getString("moyenne").replace(",", "."));
+            this.averagePerso = jsonObject.getString("moyenne").replace(",", ".");
 
         JSONArray jsonArray = jsonObject.getJSONArray("professeurs");
         for(int i = 0; i < jsonArray.length(); i++){
